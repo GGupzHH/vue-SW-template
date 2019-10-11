@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import store from './store'
-import variable from '../config/env'
+import store from './store/store'
+import TYPE_JUDGE from './utils/TypeJudge'
 Vue.config.productionTip = false
-console.log(variable)
+Vue.use(TYPE_JUDGE)
 new Vue({
   router,
   store,
