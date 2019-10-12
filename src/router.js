@@ -3,8 +3,7 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 
 Vue.use(Router)
-
-export default new Router({
+const router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
@@ -23,3 +22,8 @@ export default new Router({
     }
   ]
 })
+// 全局前置守卫
+router.beforeEach((to, from, next) => {
+  next()
+})
+export default router
